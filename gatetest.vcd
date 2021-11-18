@@ -1,0 +1,28 @@
+$date
+    Thu Nov 18 10:11:04 2021
+$end
+$version
+    MyHDL 0.11
+$end
+$timescale
+    1ns
+$end
+
+$scope module gatetest $end
+$var reg 32 ! a $end
+$var reg 32 " b $end
+$scope module NOT $end
+$var reg 32 ! a $end
+$var reg 32 " b $end
+$upscope $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b00000000000000000000000000000000 !
+b00000000000000000000000000000000 "
+$end
+b00000000000000000000000000000110 !
+b00000000000000000000000000000001 "
+b00000000000000000000000000000000 "
+#10

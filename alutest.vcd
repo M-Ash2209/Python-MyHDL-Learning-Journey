@@ -1,0 +1,37 @@
+$date
+    Thu Nov 18 12:18:57 2021
+$end
+$version
+    MyHDL 0.11
+$end
+$timescale
+    1ns
+$end
+
+$scope module alutest $end
+$var reg 5 ! aluop $end
+$var reg 1 " brt $end
+$var reg 33 # ina $end
+$var reg 33 $ inb $end
+$var reg 33 % out $end
+$scope module ALU $end
+$var reg 1 " brt $end
+$var reg 5 ! aluop $end
+$var reg 33 # ina $end
+$var reg 33 $ inb $end
+$var reg 33 % out $end
+$upscope $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b00000 !
+0"
+b000000000000000000000000000000000 #
+b000000000000000000000000000000000 $
+b000000000000000000000000000000000 %
+$end
+b101010010000001111101000000000111 #
+b000110110100101100100101101101111 $
+b01100 !
+#10
