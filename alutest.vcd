@@ -1,5 +1,5 @@
 $date
-    Thu Nov 18 12:35:09 2021
+    Sat Nov 20 08:50:16 2021
 $end
 $version
     MyHDL 0.11
@@ -15,8 +15,8 @@ $var reg 33 # ina $end
 $var reg 33 $ inb $end
 $var reg 33 % out $end
 $scope module ALU $end
-$var reg 1 " brt $end
 $var reg 5 ! aluop $end
+$var reg 1 " brt $end
 $var reg 33 # ina $end
 $var reg 33 $ inb $end
 $var reg 33 % out $end
@@ -31,7 +31,7 @@ b000000000000000000000000000000000 #
 b000000000000000000000000000000000 $
 b000000000000000000000000000000000 %
 $end
-b011010000100011110011101001000111 #
-b101110101010000111011100001111010 $
-b10110 !
+b110011011100010011101010111111011 #
+b010010011000100000010000000000011 $
+b10000 !
 #10

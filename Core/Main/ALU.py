@@ -5,6 +5,7 @@ import random
 def ALU(ina,inb,out,brt,aluop):
     @always_comb
     def alu_run():
+        b=bool(0)
 
         if aluop == 0:
             out.next = ina + inb
@@ -26,17 +27,20 @@ def ALU(ina,inb,out,brt,aluop):
             out.next = ina >> inb[5:0]
         elif aluop == 16:
             out.next = ina == inb
+            b = ina == inb
         elif aluop == 17:
             out.next = ina != inb
         elif aluop == 20 or aluop == 22:
             out.next = ina < inb
+            b = ina < inb
         elif aluop == 21 or aluop == 23:
             out.next = ina >= inb
+            b = ina >= inb
         
-        # if aluop[5:3] == 2:
-        #     brt.next = 1 
-        # else:
-        #     brt.next = 0
+        if b == 1 and aluop[5:3] == 2:
+            brt.next = 1
+        else:
+            brt.next = 0
                 
     return alu_run
 
