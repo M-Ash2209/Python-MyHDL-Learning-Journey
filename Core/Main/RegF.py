@@ -1,5 +1,5 @@
 from myhdl import * 
-
+import random
 no_of_reg = 32
 DW=(2**no_of_reg)-1
 Regi= list(intbv(0,-DW,DW) for i in range(no_of_reg))
@@ -27,11 +27,11 @@ def Regtest():
     Data_A = Signal(intbv(0,-DW,DW))
     Data_B = Signal(intbv(0,-DW,DW))
     regg = RegFile(writeEnable,rs_A,rs_B,Rd,WriteBack,Data_A,Data_B)
-    # regg.convert('Verilog')
+    regg.convert('Verilog')
     @instance
     def test():
         for i in range(2):
-            writeEnable.next,rs_A.next,rs_B.next,Rd.next,WriteBack.next = 1,3,4,3,5
+            writeEnable.next,rs_A.next,rs_B.next,Rd.next,WriteBack.next = 1,random.randrange(0, 32),random.randrange(0, 32),random.randrange(0, 32),random.randrange(-DW, DW)
             yield delay(10)
             print("rs_a : ",rs_A)
             print("rs_b : ",rs_B)
