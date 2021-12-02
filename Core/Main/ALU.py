@@ -63,6 +63,7 @@ def alutest ():
         
         yield delay(10)
         print (ina,inb,aluop,out,brt)
+        
     return alu,test
 
 inst = alutest()
