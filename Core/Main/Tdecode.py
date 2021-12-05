@@ -7,6 +7,16 @@ def Tdecode(opCode, RType, Load, Store, Branch, IType, Jalr, Jal, Lui,Aui):
     @always_comb
     def run():
 
+        RType.next = intbv(0)[1:]
+        Load.next = intbv(0)[1:]
+        Store.next = intbv(0)[1:]
+        Branch.next = intbv(0)[1:]
+        IType.next = intbv(0)[1:]
+        Jalr.next = intbv(0)[1:]
+        Jal.next = intbv(0)[1:]
+        Lui.next = intbv(0)[1:]
+        Aui.next = intbv(0)[1:]
+        
         if opCode == 51:
             RType.next = 1
         elif opCode == 3:
