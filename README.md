@@ -1,3 +1,3 @@
 # Python-MyHDL-Learning-Journey
-## ASHCORe
+## senpie
 RISC-V RV32I CORE on Pyhton
